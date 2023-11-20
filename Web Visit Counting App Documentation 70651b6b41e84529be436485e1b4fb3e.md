@@ -36,7 +36,7 @@ This documentation will walk you through the process of setting up a web visit c
 from flask import Flask
 from redis import Redis
 
-app = Flask(**name**)
+app = Flask(--name--)
 redis = Redis(host='redis', port=6379)
 
 @app.route('/')
@@ -45,7 +45,7 @@ redis.incr('hits')
 counter = str(redis.get('hits'), 'utf-8')
 return "This webpage has been viewed " + counter + " time(s)"
 
-if **name** == "**main**":
+if --name-- == "--main--":
 app.run(host="0.0.0.0", port=8000, debug=True)
 
 3 .**Requirements File**: Create a file named **`requirements.txt`** to list the dependencies:
